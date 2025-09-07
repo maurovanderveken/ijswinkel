@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJs Winkel</title>
+    <title>IJswinkel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Kies je ijs</h1>
-        
-        <div class="product">
-            <label for="smaak">Smaak:</label>
-            <select id="smaak">
-                <option value="Vanille">Vanille - €6,71/L</option>
-                <option value="Framboos">Framboos - €5,08/L</option>
-            </select>
-
-            <label for="liter">Aantal liter:</label>
-            <select id="liter">
-                <option value="1">1L</option>
-                <option value="2">2L</option>
-                <option value="3">3L</option>
-                <option value="4">4L</option>
-            </select>
-
-            <button id="toevoegen">Toevoegen aan winkelmandje</button>
+        <h1>Kies je ijssmaak</h1>
+        <div class="ice-options">
+            <div class="ice-option">
+                <label for="vanille">Vanille (€6,71 per liter)</label>
+                <input type="radio" name="flavor" id="vanille" value="Vanille" checked>
+            </div>
+            <div class="ice-option">
+                <label for="framboos">Framboos (€5,08 per liter)</label>
+                <input type="radio" name="flavor" id="framboos" value="Framboos">
+            </div>
         </div>
 
-        <button id="winkelmand">Winkelmandje</button>
-        <div id="melding" class="melding"></div>
+        <button id="addBtn">Toevoegen aan winkelmandje</button>
+        <button id="cartBtn">🛒 Winkelmandje</button>
+
+        <div id="notification" class="notification"></div>
     </div>
 
     <script src="script.js"></script>
