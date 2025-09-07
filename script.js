@@ -1,17 +1,18 @@
-const toevoegenKnop = document.getElementById('toevoegen');
-const winkelmandKnop = document.getElementById('winkelmand');
-const melding = document.getElementById('melding');
+const addBtn = document.getElementById('addBtn');
+const cartBtn = document.getElementById('cartBtn');
+const notification = document.getElementById('notification');
 
-toevoegenKnop.addEventListener('click', () => {
-    const smaak = document.getElementById('smaak').value;
-    const liter = document.getElementById('liter').value;
-    melding.textContent = `${smaak}-ijs (${liter}L) is toegevoegd!`;
-    melding.style.display = 'block';
+addBtn.addEventListener('click', () => {
+    const flavor = document.querySelector('input[name="flavor"]:checked').value;
+    showNotification(`${flavor}-ijs is toegevoegd!`);
+});
+
+function showNotification(message) {
+    notification.textContent = message;
+    notification.style.opacity = '1';
+
     setTimeout(() => {
-        melding.style.display = 'none';
+        notification.style.opacity = '0';
     }, 2000);
-});
+}
 
-winkelmandKnop.addEventListener('click', () => {
-    alert("Winkelmandje bekijken: functie nog niet geïmplementeerd.");
-});
