@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouw IJssalon - Ambachtelijk IJs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jouw IJssalon</h1>
+            <p>Heerlijk Ambachtelijk IJs, Vers Voor Jou Gemaakt!</p>
+            <button id="open-cart-btn" class="cart-button">
+                <i class="fas fa-shopping-cart"></i> Winkelmandje (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="order-section">
+            <h2>Bestel Jouw Favoriete IJs</h2>
+            <div class="order-form">
+                <div class="form-group">
+                    <label for="ice-cream-flavor">Kies een smaak:</label>
+                    <select id="ice-cream-flavor">
+                        <option value="">-- Maak een keuze --</option>
+                        <option value="vanille">Vanille-ijs (€6,71/liter)</option>
+                        <option value="framboos">Frambozen-ijs (€5,08/liter)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ice-cream-quantity">Aantal liter:</label>
+                    <input type="number" id="ice-cream-quantity" value="1" min="1">
+                </div>
+
+                <button id="add-to-cart-btn">Toevoegen aan winkelmandje</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Het winkelmandje zijpaneel -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Jouw Winkelmandje</h3>
+            <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart-message">Je winkelmandje is leeg.</p>
+        </div>
+        <div class="cart-footer">
+            <p>Totaal: <span id="cart-total">€0,00</span></p>
+            <button id="checkout-btn" class="checkout-btn">Afrekenen</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Hier plaatsen we de globale melding -->
+    <div id="notification-container"></div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Jouw IJssalon. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
