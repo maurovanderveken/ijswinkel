@@ -1,443 +1,70 @@
-:root {
-    --primary-color: #003366;   /* Donkerblauw */
-    --secondary-color: #1A1A1A; /* Donkergrijs */
-    --background-dark: #121212; /* Achtergrond */
-    --card-background: #1E1E1E; /* Donkergrijs voor kaarten */
-    --text-light: #F0F0F0;      /* Lichtgrijze tekst */
-    --text-medium: #CCCCCC;     /* Mediumgrijze tekst */
-    --border-dark: #333333;     /* Donkere randen */
-    --shadow-dark: rgba(0, 0, 0, 0.4); 
-    --error-color: #FF4C4C;     /* Rood voor verwijderen */
-    --success-color: #003366;   /* Donkerblauw voor meldingen */
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-dark);
-    color: var(--text-light);
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: #1a1a1a; /* donkergrijs */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px var(--shadow-dark);
-    position: relative;
-}
-
-header h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-header p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-.cart-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cart-button:hover {
-    background-color: #2a2a2a;
-    transform: scale(1.05);
-}
-
-.cart-button i {
-    font-size: 1.2em;
-}
-
-h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5em;
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Order Section */
-.order-section {
-    background-color: var(--card-background);
+    background-color: #0d1a33; /* donkerblauw */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 15px var(--shadow-dark);
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid var(--border-dark);
-    position: relative;
+    box-shadow: 0 0 10px #000;
+    width: 300px;
 }
 
-.order-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.form-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.form-group label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--text-medium);
-    font-size: 1.1em;
-}
-
-.form-group select,
-.form-group input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-dark);
-    border-radius: 8px;
-    font-size: 1em;
-    box-sizing: border-box;
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.form-group select option {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 10px;
-}
-
-.form-group select:focus,
-.form-group input[type="number"]:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.4);
-}
-
-.form-group input[type="number"] {
+h1 {
     text-align: center;
-    -moz-appearance: textfield;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
-.form-group input[type="number"]::-webkit-outer-spin-button,
-.form-group input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-/* Algemene knopstijl */
-button {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
     border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
+    margin-bottom: 10px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #0d1a33;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #004080;
+    background-color: #0d1a33;
+    color: #ffffff;
     transform: scale(1.05);
 }
 
-button:active {
-    transform: scale(0.98);
-}
-
-#add-to-cart-btn {
-    margin-top: 10px;
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-}
-
-#add-to-cart-btn:hover {
-    background-color: #2a2a2a;
-}
-
-/* Winkelmandje zijpaneel */
-.cart-sidebar {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 350px;
-    height: 100%;
-    background-color: var(--secondary-color);
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.6);
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid var(--border-dark);
-}
-
-.cart-sidebar.open {
-    right: 0;
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid var(--border-dark);
-    background-color: var(--primary-color);
-}
-
-.cart-header h3 {
-    margin: 0;
-    font-family: 'Pacifico', cursive;
-    color: var(--text-light);
-    font-size: 1.8em;
-}
-
-.close-cart-btn {
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: var(--text-light);
-    cursor: pointer;
-    padding: 0 10px;
-    line-height: 1;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.close-cart-btn:hover {
-    color: var(--error-color);
-    transform: scale(1.2);
-}
-
-.cart-items {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.empty-cart-message {
+.melding {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: #ffffff;
     text-align: center;
-    color: var(--text-medium);
-    font-style: italic;
-    padding: 20px 0;
+    border-radius: 5px;
+    display: none;
 }
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px dashed var(--border-dark);
-    padding: 10px 0;
-    margin-bottom: 10px;
-    color: var(--text-medium);
-}
-
-.cart-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.cart-item-info {
-    flex-grow: 1;
-}
-
-.cart-item-info p {
-    margin: 0;
-    line-height: 1.4;
-}
-
-.cart-item-info .item-name {
-    font-weight: bold;
-    color: var(--text-light);
-}
-
-.cart-item-info .item-details {
-    font-size: 0.9em;
-    color: var(--text-medium);
-}
-
-.remove-item-btn {
-    background-color: var(--error-color);
-    padding: 5px 10px;
-    font-size: 0.8em;
-    border-radius: 3px;
-    margin-left: 10px;
-    color: var(--text-light);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.remove-item-btn:hover {
-    background-color: #cc3131;
-    transform: scale(1.05);
-}
-
-.cart-footer {
-    border-top: 2px solid var(--primary-color);
-    padding: 20px;
-    text-align: right;
-    background-color: var(--card-background);
-}
-
-.cart-footer p {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.checkout-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1em;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: 1px solid #004080;
-}
-
-.checkout-btn:hover {
-    background-color: #004080;
-    color: var(--text-light);
-    transform: scale(1.05);
-}
-
-/* Overlay */
-.cart-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.cart-overlay.open {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Meldingen (toast) */
-#notification-container {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
-    pointer-events: none;
-}
-
-.notification {
-    background-color: var(--success-color);
-    color: var(--text-light);
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-}
-
-.notification.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.8em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .cart-button {
-        top: auto;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto;
-    }
-
-    /* Fix hover voor mobiel midden-knop */
-    .cart-button:hover {
-        background-color: #2a2a2a;
-        transform: translateX(-50%) scale(1.05);
-    }
-
-    .cart-sidebar {
-        width: 100%;
-        right: -100%;
-    }
-
-    #notification-container {
-        width: calc(100% - 40px);
-        left: 20px;
-        transform: none;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .order-section {
-        padding: 20px;
-    }
-
-    .cart-button {
-        font-size: 1em;
-        padding: 8px 12px;
-    }
-}
